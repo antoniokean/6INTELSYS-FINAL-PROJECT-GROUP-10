@@ -2,7 +2,7 @@
 
 # Speech Command Recognition + RL Threshold Tuning (Audio + RL)
 
-- - **Task:**
+- **Task:**
   - Classify simple commands from audio spectrograms
   - Use RL to optimize the operating threshold under asymmetric errors
 - **MVP:** Spectrogram + CNN; RL agent tuning decision threshold.
