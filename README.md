@@ -11,5 +11,5 @@
 - **Ethics:** Accessibility, accent/dialect fairness, consent for audio.
 
 ## Requirements
-- **Python:** 3.10
+![Python](https://img.shields.io/badge/python-3.10-blue)
 - **Libraries:** TensorFlow / PyTorch, NumPy, Librosa, Matplotlib, Scikit-learn
