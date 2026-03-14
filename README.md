@@ -2,8 +2,6 @@
 
 # Speech Command Recognition + RL Threshold Tuning (Audio + RL)
 
-**Python:** 3.10.13
-
 - **Task:**
   - Classify simple commands from audio spectrograms
   - Use RL to optimize the operating threshold under asymmetric errors
@@ -11,3 +9,7 @@
 - **Metrics:** Accuracy, macro-F1, expected cost.
 - **Stretch:** Noise robustness; on-device inference.
 - **Ethics:** Accessibility, accent/dialect fairness, consent for audio.
+
+## Requirements
+- **Python:** 3.10
+- **Libraries:** TensorFlow / PyTorch, NumPy, Librosa, Matplotlib, Scikit-learn
