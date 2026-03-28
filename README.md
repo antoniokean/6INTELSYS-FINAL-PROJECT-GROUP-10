@@ -132,3 +132,23 @@ This keeps the main preset result untouched in:
 - `run.sh` Bash one-command pipeline runner
 - `experiments/` configs, logs, and results by preset
 - `docs/` project documentation
+
+## Code References
+
+The implementation in this repository was written for this project, but the code is based on the official APIs and documentation of the libraries used in the system:
+
+- **PyTorch** - CNN architecture, training loop, loss, optimizer, data loading, and CUDA handling  
+  https://docs.pytorch.org/docs/stable/index.html
+- **librosa** - audio loading and spectrogram feature extraction  
+  https://librosa.org/doc/latest/index.html
+- **NumPy** - array operations, feature processing, and matrix computations  
+  https://numpy.org/doc/stable/
+- **Matplotlib** - training curves, confusion matrices, and result visualizations  
+  https://matplotlib.org/stable/
+- **KaggleHub / Kaggle access** - dataset retrieval and restoration workflow  
+  https://github.com/Kaggle/kagglehub
+
+Project-specific supporting documentation is also included in:
+
+- `docs/model_card.md`
+- `docs/ethics_statement.md`
