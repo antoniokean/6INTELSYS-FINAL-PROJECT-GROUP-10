@@ -1,0 +1,11 @@
+{
+  "path": "six/e41a903b_nohash_2.wav",
+  "label": "six",
+  "split": "testing",
+  "seed": 2518392709,
+  "confidence": 0.7948009967803955,
+  "predicted_label": "six",
+  "correct": true,
+  "pattern_similarity": 0.999999463558197,
+  "representative_path": "six/e41a903b_nohash_2.wav"
+}

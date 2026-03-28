@@ -1,0 +1,24 @@
+{
+  "best_val_accuracy": 0.921,
+  "final_validation_loss": 0.6617734186649322,
+  "final_validation_accuracy": 0.921,
+  "final_validation_macro_f1": 0.9210577758733693,
+  "final_test_loss": 0.6846247968673707,
+  "final_test_accuracy": 0.909,
+  "final_test_macro_f1": 0.908205870343264,
+  "num_classes": 34,
+  "num_training_samples": 10000,
+  "num_validation_samples": 1000,
+  "num_testing_samples": 1000,
+  "rl_threshold_tuning": {
+    "best_threshold": 0.65,
+    "validation_expected_cost_baseline": 0.395,
+    "validation_expected_cost_tuned": 0.221,
+    "validation_cost_reduction": 0.17400000000000002,
+    "test_expected_cost_baseline": 0.455,
+    "test_expected_cost_tuned": 0.234,
+    "test_cost_reduction": 0.221,
+    "abstain_cost": 1.0,
+    "misclassification_cost": 5.0
+  }
+}

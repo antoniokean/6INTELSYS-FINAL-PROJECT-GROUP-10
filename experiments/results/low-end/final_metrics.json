@@ -1,0 +1,18 @@
+{
+  "preset": "low_end",
+  "final_validation_accuracy": 0.335,
+  "final_validation_macro_f1": 0.3014066719516546,
+  "final_test_accuracy": 0.28,
+  "final_test_macro_f1": 0.2523928589672534,
+  "num_classes": 34,
+  "num_training_samples": 1000,
+  "num_validation_samples": 200,
+  "num_testing_samples": 200,
+  "best_threshold": 0.55,
+  "validation_expected_cost_baseline": 3.325,
+  "validation_expected_cost_tuned": 0.955,
+  "validation_cost_reduction": 2.37,
+  "test_expected_cost_baseline": 3.6,
+  "test_expected_cost_tuned": 1.05,
+  "test_cost_reduction": 2.55
+}

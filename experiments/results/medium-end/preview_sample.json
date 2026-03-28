@@ -1,0 +1,11 @@
+{
+  "path": "seven/837a0f64_nohash_1.wav",
+  "label": "seven",
+  "split": "testing",
+  "seed": 2518392709,
+  "confidence": 0.99853515625,
+  "predicted_label": "seven",
+  "correct": true,
+  "pattern_similarity": 1.0000001192092896,
+  "representative_path": "seven/837a0f64_nohash_1.wav"
+}

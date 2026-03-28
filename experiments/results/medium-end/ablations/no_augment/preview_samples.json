@@ -1,0 +1,167 @@
+[
+  {
+    "path": "follow/0ea9c8ce_nohash_2.wav",
+    "label": "follow",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99072265625,
+    "predicted_label": "follow",
+    "correct": true,
+    "pattern_similarity": 0.9999996423721313,
+    "representative_path": "follow/0ea9c8ce_nohash_2.wav"
+  },
+  {
+    "path": "follow/856eb138_nohash_3.wav",
+    "label": "follow",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99072265625,
+    "predicted_label": "follow",
+    "correct": true,
+    "pattern_similarity": 0.8443483114242554,
+    "representative_path": "follow/0ea9c8ce_nohash_2.wav"
+  },
+  {
+    "path": "follow/856eb138_nohash_2.wav",
+    "label": "follow",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.98876953125,
+    "predicted_label": "follow",
+    "correct": true,
+    "pattern_similarity": 0.7530528903007507,
+    "representative_path": "follow/0ea9c8ce_nohash_2.wav"
+  },
+  {
+    "path": "follow/e0c782d5_nohash_3.wav",
+    "label": "follow",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.97802734375,
+    "predicted_label": "follow",
+    "correct": true,
+    "pattern_similarity": 0.6748380661010742,
+    "representative_path": "follow/0ea9c8ce_nohash_2.wav"
+  },
+  {
+    "path": "follow/ef77b778_nohash_0.wav",
+    "label": "follow",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.9970703125,
+    "predicted_label": "follow",
+    "correct": true,
+    "pattern_similarity": 0.6557180285453796,
+    "representative_path": "follow/0ea9c8ce_nohash_2.wav"
+  },
+  {
+    "path": "learn/0cb74144_nohash_0.wav",
+    "label": "learn",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.98974609375,
+    "predicted_label": "learn",
+    "correct": true,
+    "pattern_similarity": 0.9999996423721313,
+    "representative_path": "learn/0cb74144_nohash_0.wav"
+  },
+  {
+    "path": "learn/ccca5655_nohash_0.wav",
+    "label": "learn",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99560546875,
+    "predicted_label": "learn",
+    "correct": true,
+    "pattern_similarity": 0.7430442571640015,
+    "representative_path": "learn/0cb74144_nohash_0.wav"
+  },
+  {
+    "path": "learn/ccca5655_nohash_2.wav",
+    "label": "learn",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99365234375,
+    "predicted_label": "learn",
+    "correct": true,
+    "pattern_similarity": 0.7308633327484131,
+    "representative_path": "learn/0cb74144_nohash_0.wav"
+  },
+  {
+    "path": "learn/4fd1443e_nohash_0.wav",
+    "label": "learn",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.9892578125,
+    "predicted_label": "learn",
+    "correct": true,
+    "pattern_similarity": 0.6830160021781921,
+    "representative_path": "learn/0cb74144_nohash_0.wav"
+  },
+  {
+    "path": "learn/856eb138_nohash_4.wav",
+    "label": "learn",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.94580078125,
+    "predicted_label": "learn",
+    "correct": true,
+    "pattern_similarity": 0.6528396606445312,
+    "representative_path": "learn/0cb74144_nohash_0.wav"
+  },
+  {
+    "path": "dog/0f250098_nohash_0.wav",
+    "label": "dog",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99365234375,
+    "predicted_label": "dog",
+    "correct": true,
+    "pattern_similarity": 0.9999999403953552,
+    "representative_path": "dog/0f250098_nohash_0.wav"
+  },
+  {
+    "path": "dog/370844f7_nohash_1.wav",
+    "label": "dog",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99658203125,
+    "predicted_label": "dog",
+    "correct": true,
+    "pattern_similarity": 0.7977336645126343,
+    "representative_path": "dog/0f250098_nohash_0.wav"
+  },
+  {
+    "path": "dog/c256377f_nohash_0.wav",
+    "label": "dog",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.994140625,
+    "predicted_label": "dog",
+    "correct": true,
+    "pattern_similarity": 0.7878181338310242,
+    "representative_path": "dog/0f250098_nohash_0.wav"
+  },
+  {
+    "path": "dog/4c7c95de_nohash_0.wav",
+    "label": "dog",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.98876953125,
+    "predicted_label": "dog",
+    "correct": true,
+    "pattern_similarity": 0.6492550373077393,
+    "representative_path": "dog/0f250098_nohash_0.wav"
+  },
+  {
+    "path": "dog/b83c1acf_nohash_0.wav",
+    "label": "dog",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.9912109375,
+    "predicted_label": "dog",
+    "correct": true,
+    "pattern_similarity": 0.6354752779006958,
+    "representative_path": "dog/0f250098_nohash_0.wav"
+  }
+]
