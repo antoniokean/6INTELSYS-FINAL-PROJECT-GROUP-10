@@ -1,0 +1,22 @@
+{
+  "preset": "medium_end",
+  "epochs_completed": 15,
+  "best_epoch": 14,
+  "best_validation_accuracy": 0.927,
+  "final_validation_accuracy": 0.927,
+  "final_validation_macro_f1": 0.9269830255705112,
+  "final_test_accuracy": 0.916,
+  "final_test_macro_f1": 0.9159312499956112,
+  "generalization_gap": -0.02760000000000007,
+  "batch_size": 16,
+  "epochs_target": 15,
+  "rl_threshold_tuning": {
+    "best_threshold": 0.8,
+    "validation_expected_cost_baseline": 0.365,
+    "validation_expected_cost_tuned": 0.209,
+    "validation_relative_reduction": 0.4273972602739726,
+    "test_expected_cost_baseline": 0.42,
+    "test_expected_cost_tuned": 0.257,
+    "test_relative_reduction": 0.38809523809523805
+  }
+}

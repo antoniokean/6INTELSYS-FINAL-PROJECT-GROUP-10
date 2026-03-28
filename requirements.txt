@@ -1,0 +1,6 @@
+certifi
+kagglehub
+librosa
+matplotlib
+numpy
+torch

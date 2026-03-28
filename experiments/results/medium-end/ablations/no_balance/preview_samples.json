@@ -1,0 +1,167 @@
+[
+  {
+    "path": "left/db43cd03_nohash_1.wav",
+    "label": "left",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99951171875,
+    "predicted_label": "left",
+    "correct": true,
+    "pattern_similarity": 1.0,
+    "representative_path": "left/db43cd03_nohash_1.wav"
+  },
+  {
+    "path": "left/87070229_nohash_2.wav",
+    "label": "left",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99951171875,
+    "predicted_label": "left",
+    "correct": true,
+    "pattern_similarity": 0.7608671188354492,
+    "representative_path": "left/db43cd03_nohash_1.wav"
+  },
+  {
+    "path": "left/f822b9bf_nohash_0.wav",
+    "label": "left",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.9990234375,
+    "predicted_label": "left",
+    "correct": true,
+    "pattern_similarity": 0.7576002478599548,
+    "representative_path": "left/db43cd03_nohash_1.wav"
+  },
+  {
+    "path": "left/9dc1889e_nohash_0.wav",
+    "label": "left",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.984375,
+    "predicted_label": "left",
+    "correct": true,
+    "pattern_similarity": 0.6738886833190918,
+    "representative_path": "left/db43cd03_nohash_1.wav"
+  },
+  {
+    "path": "left/4c6167ca_nohash_4.wav",
+    "label": "left",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99560546875,
+    "predicted_label": "left",
+    "correct": true,
+    "pattern_similarity": 0.5845353603363037,
+    "representative_path": "left/db43cd03_nohash_1.wav"
+  },
+  {
+    "path": "two/3cc595de_nohash_4.wav",
+    "label": "two",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.998046875,
+    "predicted_label": "two",
+    "correct": true,
+    "pattern_similarity": 0.9999992251396179,
+    "representative_path": "two/3cc595de_nohash_4.wav"
+  },
+  {
+    "path": "two/beb458a4_nohash_3.wav",
+    "label": "two",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99951171875,
+    "predicted_label": "two",
+    "correct": true,
+    "pattern_similarity": 0.8126966953277588,
+    "representative_path": "two/3cc595de_nohash_4.wav"
+  },
+  {
+    "path": "two/91b03183_nohash_0.wav",
+    "label": "two",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.9990234375,
+    "predicted_label": "two",
+    "correct": true,
+    "pattern_similarity": 0.7866565585136414,
+    "representative_path": "two/3cc595de_nohash_4.wav"
+  },
+  {
+    "path": "two/e71a9381_nohash_0.wav",
+    "label": "two",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.9990234375,
+    "predicted_label": "two",
+    "correct": true,
+    "pattern_similarity": 0.7716839909553528,
+    "representative_path": "two/3cc595de_nohash_4.wav"
+  },
+  {
+    "path": "two/d0faf7e4_nohash_3.wav",
+    "label": "two",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.9970703125,
+    "predicted_label": "two",
+    "correct": true,
+    "pattern_similarity": 0.62656569480896,
+    "representative_path": "two/3cc595de_nohash_4.wav"
+  },
+  {
+    "path": "sheila/105a0eea_nohash_0.wav",
+    "label": "sheila",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99365234375,
+    "predicted_label": "sheila",
+    "correct": true,
+    "pattern_similarity": 0.9999995827674866,
+    "representative_path": "sheila/105a0eea_nohash_0.wav"
+  },
+  {
+    "path": "sheila/105a0eea_nohash_1.wav",
+    "label": "sheila",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.9951171875,
+    "predicted_label": "sheila",
+    "correct": true,
+    "pattern_similarity": 0.7802250385284424,
+    "representative_path": "sheila/105a0eea_nohash_0.wav"
+  },
+  {
+    "path": "sheila/5ff3f9a1_nohash_1.wav",
+    "label": "sheila",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.9970703125,
+    "predicted_label": "sheila",
+    "correct": true,
+    "pattern_similarity": 0.6578289270401001,
+    "representative_path": "sheila/105a0eea_nohash_0.wav"
+  },
+  {
+    "path": "sheila/47d01978_nohash_0.wav",
+    "label": "sheila",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99755859375,
+    "predicted_label": "sheila",
+    "correct": true,
+    "pattern_similarity": 0.6543691158294678,
+    "representative_path": "sheila/105a0eea_nohash_0.wav"
+  },
+  {
+    "path": "sheila/412c675c_nohash_0.wav",
+    "label": "sheila",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.998046875,
+    "predicted_label": "sheila",
+    "correct": true,
+    "pattern_similarity": 0.6416272521018982,
+    "representative_path": "sheila/105a0eea_nohash_0.wav"
+  }
+]

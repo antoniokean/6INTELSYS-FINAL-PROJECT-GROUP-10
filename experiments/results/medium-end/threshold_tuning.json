@@ -1,0 +1,1056 @@
+{
+  "config": {
+    "min_threshold": 0.35,
+    "max_threshold": 0.95,
+    "step_size": 0.05,
+    "episodes": 80,
+    "steps_per_episode": 12,
+    "learning_rate": 0.3,
+    "discount_factor": 0.9,
+    "epsilon": 0.25,
+    "epsilon_decay": 0.97,
+    "min_epsilon": 0.02,
+    "abstain_cost": 1.0,
+    "misclassification_cost": 5.0,
+    "seed": 2518392709
+  },
+  "threshold_grid": [
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "baseline_metrics": {
+    "threshold": 0.0,
+    "expected_cost": 0.365,
+    "coverage": 1.0,
+    "abstain_rate": 0.0,
+    "accepted_accuracy": 0.927,
+    "thresholded_accuracy": 0.927,
+    "average_confidence": 0.908248782157898,
+    "num_samples": 1000,
+    "num_abstained": 0,
+    "num_accepted": 1000,
+    "num_wrong_accepted": 73
+  },
+  "best_threshold": 0.8,
+  "best_metrics": {
+    "threshold": 0.8,
+    "expected_cost": 0.209,
+    "coverage": 0.861,
+    "abstain_rate": 0.139,
+    "accepted_accuracy": 0.983739837398374,
+    "thresholded_accuracy": 0.847,
+    "average_confidence": 0.908248782157898,
+    "num_samples": 1000,
+    "num_abstained": 139,
+    "num_accepted": 861,
+    "num_wrong_accepted": 14
+  },
+  "cost_reduction": 0.156,
+  "threshold_metrics": [
+    {
+      "threshold": 0.35,
+      "expected_cost": 0.297,
+      "coverage": 0.978,
+      "abstain_rate": 0.022,
+      "accepted_accuracy": 0.943762781186094,
+      "thresholded_accuracy": 0.923,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 22,
+      "num_accepted": 978,
+      "num_wrong_accepted": 55
+    },
+    {
+      "threshold": 0.4,
+      "expected_cost": 0.293,
+      "coverage": 0.972,
+      "abstain_rate": 0.028,
+      "accepted_accuracy": 0.9454732510288066,
+      "thresholded_accuracy": 0.919,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 28,
+      "num_accepted": 972,
+      "num_wrong_accepted": 53
+    },
+    {
+      "threshold": 0.45,
+      "expected_cost": 0.274,
+      "coverage": 0.966,
+      "abstain_rate": 0.034,
+      "accepted_accuracy": 0.9503105590062112,
+      "thresholded_accuracy": 0.918,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 34,
+      "num_accepted": 966,
+      "num_wrong_accepted": 48
+    },
+    {
+      "threshold": 0.5,
+      "expected_cost": 0.262,
+      "coverage": 0.953,
+      "abstain_rate": 0.047,
+      "accepted_accuracy": 0.9548793284365162,
+      "thresholded_accuracy": 0.91,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 47,
+      "num_accepted": 953,
+      "num_wrong_accepted": 43
+    },
+    {
+      "threshold": 0.55,
+      "expected_cost": 0.249,
+      "coverage": 0.936,
+      "abstain_rate": 0.064,
+      "accepted_accuracy": 0.9604700854700855,
+      "thresholded_accuracy": 0.899,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 64,
+      "num_accepted": 936,
+      "num_wrong_accepted": 37
+    },
+    {
+      "threshold": 0.6,
+      "expected_cost": 0.227,
+      "coverage": 0.923,
+      "abstain_rate": 0.077,
+      "accepted_accuracy": 0.9674972914409534,
+      "thresholded_accuracy": 0.893,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 77,
+      "num_accepted": 923,
+      "num_wrong_accepted": 30
+    },
+    {
+      "threshold": 0.65,
+      "expected_cost": 0.222,
+      "coverage": 0.908,
+      "abstain_rate": 0.092,
+      "accepted_accuracy": 0.9713656387665198,
+      "thresholded_accuracy": 0.882,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 92,
+      "num_accepted": 908,
+      "num_wrong_accepted": 26
+    },
+    {
+      "threshold": 0.7,
+      "expected_cost": 0.214,
+      "coverage": 0.896,
+      "abstain_rate": 0.104,
+      "accepted_accuracy": 0.9754464285714286,
+      "thresholded_accuracy": 0.874,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 104,
+      "num_accepted": 896,
+      "num_wrong_accepted": 22
+    },
+    {
+      "threshold": 0.75,
+      "expected_cost": 0.216,
+      "coverage": 0.879,
+      "abstain_rate": 0.121,
+      "accepted_accuracy": 0.9783845278725825,
+      "thresholded_accuracy": 0.86,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 121,
+      "num_accepted": 879,
+      "num_wrong_accepted": 19
+    },
+    {
+      "threshold": 0.8,
+      "expected_cost": 0.209,
+      "coverage": 0.861,
+      "abstain_rate": 0.139,
+      "accepted_accuracy": 0.983739837398374,
+      "thresholded_accuracy": 0.847,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 139,
+      "num_accepted": 861,
+      "num_wrong_accepted": 14
+    },
+    {
+      "threshold": 0.85,
+      "expected_cost": 0.216,
+      "coverage": 0.834,
+      "abstain_rate": 0.166,
+      "accepted_accuracy": 0.988009592326139,
+      "thresholded_accuracy": 0.824,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 166,
+      "num_accepted": 834,
+      "num_wrong_accepted": 10
+    },
+    {
+      "threshold": 0.9,
+      "expected_cost": 0.244,
+      "coverage": 0.786,
+      "abstain_rate": 0.214,
+      "accepted_accuracy": 0.9923664122137404,
+      "thresholded_accuracy": 0.78,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 214,
+      "num_accepted": 786,
+      "num_wrong_accepted": 6
+    },
+    {
+      "threshold": 0.95,
+      "expected_cost": 0.333,
+      "coverage": 0.687,
+      "abstain_rate": 0.313,
+      "accepted_accuracy": 0.9941775836972343,
+      "thresholded_accuracy": 0.683,
+      "average_confidence": 0.908248782157898,
+      "num_samples": 1000,
+      "num_abstained": 313,
+      "num_accepted": 687,
+      "num_wrong_accepted": 4
+    }
+  ],
+  "q_values": [
+    [
+      0.0,
+      0.0,
+      0.024820173159241676
+    ],
+    [
+      -0.0012092329561710358,
+      0.0,
+      0.054949481040239334
+    ],
+    [
+      0.001582997152581811,
+      0.010050701908767223,
+      0.0490984246134758
+    ],
+    [
+      -0.003599999938160181,
+      0.0017900998936966062,
+      0.04449428245425224
+    ],
+    [
+      -0.005576999858021736,
+      0.0,
+      0.036009836941957474
+    ],
+    [
+      -0.006599999964237213,
+      0.003744333516806364,
+      0.015680385753512383
+    ],
+    [
+      6.664197280770168e-05,
+      0.0,
+      0.011869889684021473
+    ],
+    [
+      -0.00415439996868372,
+      0.0016753048403188586,
+      0.004299994558095932
+    ],
+    [
+      0.0037703532725572586,
+      0.002759209368377924,
+      0.006999999284744263
+    ],
+    [
+      -0.0007553979521617293,
+      0.0,
+      -0.0007645968580618501
+    ],
+    [
+      0.00699953967705369,
+      0.002247077878564596,
+      -0.0026856425683945417
+    ],
+    [
+      0.033722370862960815,
+      0.0,
+      0.0
+    ],
+    [
+      0.09735293686389923,
+      0.0,
+      0.0
+    ]
+  ],
+  "action_names": {
+    "-1": "decrease_threshold",
+    "0": "keep_threshold",
+    "1": "increase_threshold"
+  },
+  "history": [
+    {
+      "episode": 1,
+      "start_threshold": 0.8,
+      "end_threshold": 0.4,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": -0.08399999999999999,
+      "epsilon": 0.25
+    },
+    {
+      "episode": 2,
+      "start_threshold": 0.35,
+      "end_threshold": 0.4,
+      "best_threshold_seen": 0.4,
+      "best_expected_cost_seen": 0.293,
+      "episode_reward": 0.0040000000000000036,
+      "epsilon": 0.2425
+    },
+    {
+      "episode": 3,
+      "start_threshold": 0.9,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.035,
+      "epsilon": 0.235225
+    },
+    {
+      "episode": 4,
+      "start_threshold": 0.85,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.22816825
+    },
+    {
+      "episode": 5,
+      "start_threshold": 0.75,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.22132320249999998
+    },
+    {
+      "episode": 6,
+      "start_threshold": 0.8,
+      "end_threshold": 0.85,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": -0.007000000000000006,
+      "epsilon": 0.21468350642499998
+    },
+    {
+      "episode": 7,
+      "start_threshold": 0.45,
+      "end_threshold": 0.4,
+      "best_threshold_seen": 0.45,
+      "best_expected_cost_seen": 0.274,
+      "episode_reward": -0.01899999999999996,
+      "epsilon": 0.20824300123224998
+    },
+    {
+      "episode": 8,
+      "start_threshold": 0.45,
+      "end_threshold": 0.45,
+      "best_threshold_seen": 0.45,
+      "best_expected_cost_seen": 0.274,
+      "episode_reward": 0.0,
+      "epsilon": 0.20199571119528248
+    },
+    {
+      "episode": 9,
+      "start_threshold": 0.35,
+      "end_threshold": 0.4,
+      "best_threshold_seen": 0.4,
+      "best_expected_cost_seen": 0.293,
+      "episode_reward": 0.0040000000000000036,
+      "epsilon": 0.195935839859424
+    },
+    {
+      "episode": 10,
+      "start_threshold": 0.4,
+      "end_threshold": 0.4,
+      "best_threshold_seen": 0.4,
+      "best_expected_cost_seen": 0.293,
+      "episode_reward": 0.0,
+      "epsilon": 0.19005776466364127
+    },
+    {
+      "episode": 11,
+      "start_threshold": 0.9,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.035,
+      "epsilon": 0.18435603172373202
+    },
+    {
+      "episode": 12,
+      "start_threshold": 0.95,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.12400000000000003,
+      "epsilon": 0.17882535077202005
+    },
+    {
+      "episode": 13,
+      "start_threshold": 0.7,
+      "end_threshold": 0.7,
+      "best_threshold_seen": 0.7,
+      "best_expected_cost_seen": 0.214,
+      "episode_reward": 0.0,
+      "epsilon": 0.17346059024885946
+    },
+    {
+      "episode": 14,
+      "start_threshold": 0.4,
+      "end_threshold": 0.5,
+      "best_threshold_seen": 0.5,
+      "best_expected_cost_seen": 0.262,
+      "episode_reward": 0.030999999999999972,
+      "epsilon": 0.16825677254139368
+    },
+    {
+      "episode": 15,
+      "start_threshold": 0.65,
+      "end_threshold": 0.85,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.006000000000000005,
+      "epsilon": 0.16320906936515187
+    },
+    {
+      "episode": 16,
+      "start_threshold": 0.9,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.035,
+      "epsilon": 0.1583127972841973
+    },
+    {
+      "episode": 17,
+      "start_threshold": 0.45,
+      "end_threshold": 0.55,
+      "best_threshold_seen": 0.55,
+      "best_expected_cost_seen": 0.249,
+      "episode_reward": 0.025000000000000022,
+      "epsilon": 0.1535634133656714
+    },
+    {
+      "episode": 18,
+      "start_threshold": 0.9,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.035,
+      "epsilon": 0.14895651096470125
+    },
+    {
+      "episode": 19,
+      "start_threshold": 0.4,
+      "end_threshold": 0.55,
+      "best_threshold_seen": 0.55,
+      "best_expected_cost_seen": 0.249,
+      "episode_reward": 0.043999999999999984,
+      "epsilon": 0.14448781563576021
+    },
+    {
+      "episode": 20,
+      "start_threshold": 0.75,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.1401531811666874
+    },
+    {
+      "episode": 21,
+      "start_threshold": 0.65,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.013000000000000012,
+      "epsilon": 0.13594858573168678
+    },
+    {
+      "episode": 22,
+      "start_threshold": 0.4,
+      "end_threshold": 0.55,
+      "best_threshold_seen": 0.55,
+      "best_expected_cost_seen": 0.249,
+      "episode_reward": 0.043999999999999984,
+      "epsilon": 0.13187012815973617
+    },
+    {
+      "episode": 23,
+      "start_threshold": 0.9,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.035,
+      "epsilon": 0.12791402431494409
+    },
+    {
+      "episode": 24,
+      "start_threshold": 0.8,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.0,
+      "epsilon": 0.12407660358549576
+    },
+    {
+      "episode": 25,
+      "start_threshold": 0.7,
+      "end_threshold": 0.85,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": -0.0020000000000000018,
+      "epsilon": 0.12035430547793088
+    },
+    {
+      "episode": 26,
+      "start_threshold": 0.6,
+      "end_threshold": 0.75,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.01100000000000001,
+      "epsilon": 0.11674367631359295
+    },
+    {
+      "episode": 27,
+      "start_threshold": 0.35,
+      "end_threshold": 0.7,
+      "best_threshold_seen": 0.7,
+      "best_expected_cost_seen": 0.214,
+      "episode_reward": 0.08299999999999999,
+      "epsilon": 0.11324136602418515
+    },
+    {
+      "episode": 28,
+      "start_threshold": 0.85,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.1098441250434596
+    },
+    {
+      "episode": 29,
+      "start_threshold": 0.75,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.10654880129215581
+    },
+    {
+      "episode": 30,
+      "start_threshold": 0.5,
+      "end_threshold": 0.75,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.04600000000000001,
+      "epsilon": 0.10335233725339113
+    },
+    {
+      "episode": 31,
+      "start_threshold": 0.5,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.05300000000000002,
+      "epsilon": 0.1002517671357894
+    },
+    {
+      "episode": 32,
+      "start_threshold": 0.8,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.0,
+      "epsilon": 0.09724421412171572
+    },
+    {
+      "episode": 33,
+      "start_threshold": 0.7,
+      "end_threshold": 0.75,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": -0.0020000000000000018,
+      "epsilon": 0.09432688769806424
+    },
+    {
+      "episode": 34,
+      "start_threshold": 0.65,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.013000000000000012,
+      "epsilon": 0.09149708106712232
+    },
+    {
+      "episode": 35,
+      "start_threshold": 0.95,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.12400000000000003,
+      "epsilon": 0.08875216863510864
+    },
+    {
+      "episode": 36,
+      "start_threshold": 0.45,
+      "end_threshold": 0.85,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.058000000000000024,
+      "epsilon": 0.08608960357605537
+    },
+    {
+      "episode": 37,
+      "start_threshold": 0.65,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.013000000000000012,
+      "epsilon": 0.0835069154687737
+    },
+    {
+      "episode": 38,
+      "start_threshold": 0.45,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.06500000000000003,
+      "epsilon": 0.08100170800471049
+    },
+    {
+      "episode": 39,
+      "start_threshold": 0.7,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.0050000000000000044,
+      "epsilon": 0.07857165676456918
+    },
+    {
+      "episode": 40,
+      "start_threshold": 0.6,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.018000000000000016,
+      "epsilon": 0.0762145070616321
+    },
+    {
+      "episode": 41,
+      "start_threshold": 0.65,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.013000000000000012,
+      "epsilon": 0.07392807184978314
+    },
+    {
+      "episode": 42,
+      "start_threshold": 0.35,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.088,
+      "epsilon": 0.07171022969428965
+    },
+    {
+      "episode": 43,
+      "start_threshold": 0.75,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.06955892280346096
+    },
+    {
+      "episode": 44,
+      "start_threshold": 0.6,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.018000000000000016,
+      "epsilon": 0.06747215511935713
+    },
+    {
+      "episode": 45,
+      "start_threshold": 0.65,
+      "end_threshold": 0.85,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.006000000000000005,
+      "epsilon": 0.06544799046577641
+    },
+    {
+      "episode": 46,
+      "start_threshold": 0.8,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.0,
+      "epsilon": 0.06348455075180312
+    },
+    {
+      "episode": 47,
+      "start_threshold": 0.85,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.061580014229249025
+    },
+    {
+      "episode": 48,
+      "start_threshold": 0.5,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.05300000000000002,
+      "epsilon": 0.059732613802371555
+    },
+    {
+      "episode": 49,
+      "start_threshold": 0.65,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.013000000000000012,
+      "epsilon": 0.05794063538830041
+    },
+    {
+      "episode": 50,
+      "start_threshold": 0.75,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.0562024163266514
+    },
+    {
+      "episode": 51,
+      "start_threshold": 0.45,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.06500000000000003,
+      "epsilon": 0.054516343836851854
+    },
+    {
+      "episode": 52,
+      "start_threshold": 0.6,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.018000000000000016,
+      "epsilon": 0.0528808535217463
+    },
+    {
+      "episode": 53,
+      "start_threshold": 0.45,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.06500000000000003,
+      "epsilon": 0.051294427916093906
+    },
+    {
+      "episode": 54,
+      "start_threshold": 0.45,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.06500000000000003,
+      "epsilon": 0.04975559507861109
+    },
+    {
+      "episode": 55,
+      "start_threshold": 0.6,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.018000000000000016,
+      "epsilon": 0.04826292722625276
+    },
+    {
+      "episode": 56,
+      "start_threshold": 0.8,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.0,
+      "epsilon": 0.04681503940946517
+    },
+    {
+      "episode": 57,
+      "start_threshold": 0.85,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.04541058822718121
+    },
+    {
+      "episode": 58,
+      "start_threshold": 0.45,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.06500000000000003,
+      "epsilon": 0.04404827058036578
+    },
+    {
+      "episode": 59,
+      "start_threshold": 0.5,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.05300000000000002,
+      "epsilon": 0.042726822462954804
+    },
+    {
+      "episode": 60,
+      "start_threshold": 0.4,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.08399999999999999,
+      "epsilon": 0.04144501778906616
+    },
+    {
+      "episode": 61,
+      "start_threshold": 0.65,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.013000000000000012,
+      "epsilon": 0.040201667255394175
+    },
+    {
+      "episode": 62,
+      "start_threshold": 0.6,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.018000000000000016,
+      "epsilon": 0.03899561723773235
+    },
+    {
+      "episode": 63,
+      "start_threshold": 0.4,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.08399999999999999,
+      "epsilon": 0.03782574872060038
+    },
+    {
+      "episode": 64,
+      "start_threshold": 0.85,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.036690976258982363
+    },
+    {
+      "episode": 65,
+      "start_threshold": 0.65,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.013000000000000012,
+      "epsilon": 0.035590246971212894
+    },
+    {
+      "episode": 66,
+      "start_threshold": 0.6,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.018000000000000016,
+      "epsilon": 0.03452253956207651
+    },
+    {
+      "episode": 67,
+      "start_threshold": 0.55,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.04000000000000001,
+      "epsilon": 0.03348686337521421
+    },
+    {
+      "episode": 68,
+      "start_threshold": 0.55,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.04000000000000001,
+      "epsilon": 0.03248225747395778
+    },
+    {
+      "episode": 69,
+      "start_threshold": 0.95,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.12400000000000003,
+      "epsilon": 0.03150778974973905
+    },
+    {
+      "episode": 70,
+      "start_threshold": 0.85,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.03056255605724688
+    },
+    {
+      "episode": 71,
+      "start_threshold": 0.85,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.02964567937552947
+    },
+    {
+      "episode": 72,
+      "start_threshold": 0.75,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.028756308994263586
+    },
+    {
+      "episode": 73,
+      "start_threshold": 0.45,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.06500000000000003,
+      "epsilon": 0.027893619724435676
+    },
+    {
+      "episode": 74,
+      "start_threshold": 0.95,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.12400000000000003,
+      "epsilon": 0.027056811132702606
+    },
+    {
+      "episode": 75,
+      "start_threshold": 0.9,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.035,
+      "epsilon": 0.026245106798721527
+    },
+    {
+      "episode": 76,
+      "start_threshold": 0.95,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.12400000000000003,
+      "epsilon": 0.02545775359475988
+    },
+    {
+      "episode": 77,
+      "start_threshold": 0.4,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.08399999999999999,
+      "epsilon": 0.024694020986917083
+    },
+    {
+      "episode": 78,
+      "start_threshold": 0.6,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.018000000000000016,
+      "epsilon": 0.02395320035730957
+    },
+    {
+      "episode": 79,
+      "start_threshold": 0.35,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.088,
+      "epsilon": 0.023234604346590283
+    },
+    {
+      "episode": 80,
+      "start_threshold": 0.75,
+      "end_threshold": 0.8,
+      "best_threshold_seen": 0.8,
+      "best_expected_cost_seen": 0.209,
+      "episode_reward": 0.007000000000000006,
+      "epsilon": 0.022537566216192573
+    }
+  ],
+  "validation_loss": 0.6273378891944885,
+  "validation_accuracy": 0.927,
+  "validation_macro_f1": 0.9269830255705112,
+  "test_baseline_metrics": {
+    "threshold": 0.0,
+    "expected_cost": 0.42,
+    "coverage": 1.0,
+    "abstain_rate": 0.0,
+    "accepted_accuracy": 0.916,
+    "thresholded_accuracy": 0.916,
+    "average_confidence": 0.8875091671943665,
+    "num_samples": 1000,
+    "num_abstained": 0,
+    "num_accepted": 1000,
+    "num_wrong_accepted": 84
+  },
+  "test_tuned_metrics": {
+    "threshold": 0.8,
+    "expected_cost": 0.257,
+    "coverage": 0.818,
+    "abstain_rate": 0.182,
+    "accepted_accuracy": 0.9816625916870416,
+    "thresholded_accuracy": 0.803,
+    "average_confidence": 0.8875091671943665,
+    "num_samples": 1000,
+    "num_abstained": 182,
+    "num_accepted": 818,
+    "num_wrong_accepted": 15
+  },
+  "test_cost_reduction": 0.16299999999999998,
+  "test_macro_f1": 0.9159312499956112
+}

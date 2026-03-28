@@ -1,0 +1,11 @@
+{
+  "path": "left/db43cd03_nohash_1.wav",
+  "label": "left",
+  "split": "validation",
+  "seed": 2518392709,
+  "confidence": 0.99951171875,
+  "predicted_label": "left",
+  "correct": true,
+  "pattern_similarity": 1.0,
+  "representative_path": "left/db43cd03_nohash_1.wav"
+}

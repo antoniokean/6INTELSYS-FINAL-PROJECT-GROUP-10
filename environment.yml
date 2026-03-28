@@ -1,0 +1,17 @@
+name: speech-command-rl
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - matplotlib
+  - librosa
+  - pytorch
+  - certifi
+  - jupyter
+  - pip:
+      - kagglehub
+      - -r requirements.txt

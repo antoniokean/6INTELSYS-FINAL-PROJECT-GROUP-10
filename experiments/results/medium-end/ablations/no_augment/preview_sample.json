@@ -1,0 +1,11 @@
+{
+  "path": "follow/0ea9c8ce_nohash_2.wav",
+  "label": "follow",
+  "split": "validation",
+  "seed": 2518392709,
+  "confidence": 0.99072265625,
+  "predicted_label": "follow",
+  "correct": true,
+  "pattern_similarity": 0.9999996423721313,
+  "representative_path": "follow/0ea9c8ce_nohash_2.wav"
+}

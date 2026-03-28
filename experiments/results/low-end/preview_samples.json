@@ -1,0 +1,167 @@
+[
+  {
+    "path": "six/e41a903b_nohash_2.wav",
+    "label": "six",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.7948009967803955,
+    "predicted_label": "six",
+    "correct": true,
+    "pattern_similarity": 0.999999463558197,
+    "representative_path": "six/e41a903b_nohash_2.wav"
+  },
+  {
+    "path": "six/5a5721f8_nohash_4.wav",
+    "label": "six",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.7456234097480774,
+    "representative_path": "six/e41a903b_nohash_2.wav"
+  },
+  {
+    "path": "six/3bc21161_nohash_3.wav",
+    "label": "six",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.7100133299827576,
+    "representative_path": "six/e41a903b_nohash_2.wav"
+  },
+  {
+    "path": "six/837f7378_nohash_0.wav",
+    "label": "six",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.5557951927185059,
+    "representative_path": "six/e41a903b_nohash_2.wav"
+  },
+  {
+    "path": "six/9f93e408_nohash_3.wav",
+    "label": "six",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.5464356541633606,
+    "representative_path": "six/e41a903b_nohash_2.wav"
+  },
+  {
+    "path": "sheila/4845bb10_nohash_0.wav",
+    "label": "sheila",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.24223056435585022,
+    "predicted_label": "six",
+    "correct": false,
+    "pattern_similarity": 0.9999999403953552,
+    "representative_path": "sheila/4845bb10_nohash_0.wav"
+  },
+  {
+    "path": "sheila/5fc3ed24_nohash_1.wav",
+    "label": "sheila",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.6904313564300537,
+    "representative_path": "sheila/4845bb10_nohash_0.wav"
+  },
+  {
+    "path": "sheila/da5dadb9_nohash_1.wav",
+    "label": "sheila",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.6338042616844177,
+    "representative_path": "sheila/4845bb10_nohash_0.wav"
+  },
+  {
+    "path": "sheila/ffb86d3c_nohash_0.wav",
+    "label": "sheila",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.7744129300117493,
+    "predicted_label": "sheila",
+    "correct": true,
+    "pattern_similarity": 0.5880699753761292,
+    "representative_path": "sheila/4845bb10_nohash_0.wav"
+  },
+  {
+    "path": "sheila/cd671b5f_nohash_0.wav",
+    "label": "sheila",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.5250932574272156,
+    "representative_path": "sheila/4845bb10_nohash_0.wav"
+  },
+  {
+    "path": "visual/ca4d5368_nohash_0.wav",
+    "label": "visual",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.5531224012374878,
+    "predicted_label": "visual",
+    "correct": true,
+    "pattern_similarity": 1.0000003576278687,
+    "representative_path": "visual/ca4d5368_nohash_0.wav"
+  },
+  {
+    "path": "visual/4c6167ca_nohash_2.wav",
+    "label": "visual",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.3029199540615082,
+    "predicted_label": "seven",
+    "correct": false,
+    "pattern_similarity": 0.6522228121757507,
+    "representative_path": "visual/ca4d5368_nohash_0.wav"
+  },
+  {
+    "path": "visual/856eb138_nohash_1.wav",
+    "label": "visual",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.44012415409088135,
+    "predicted_label": "visual",
+    "correct": true,
+    "pattern_similarity": 0.557711124420166,
+    "representative_path": "visual/ca4d5368_nohash_0.wav"
+  },
+  {
+    "path": "visual/ed032775_nohash_3.wav",
+    "label": "visual",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.5456787943840027,
+    "representative_path": "visual/ca4d5368_nohash_0.wav"
+  },
+  {
+    "path": "visual/012187a4_nohash_0.wav",
+    "label": "visual",
+    "split": "training",
+    "seed": 2518392709,
+    "confidence": null,
+    "predicted_label": null,
+    "correct": null,
+    "pattern_similarity": 0.5203134417533875,
+    "representative_path": "visual/ca4d5368_nohash_0.wav"
+  }
+]
