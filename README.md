@@ -100,6 +100,18 @@ This keeps the main preset result untouched in:
 
 - `experiments/results/<preset>/`
 
+## Baselines
+
+- Simple non-DL baseline:
+  `python .\src\non_dl_baseline.py --preset medium_end`
+- Deep-learning baseline:
+  `python .\run.py --preset medium_end --no-open-files`
+
+The non-DL baseline uses the same manifest split and the same 3-channel log-Mel features as the CNN, but replaces the neural network with a nearest-centroid classifier. Its outputs are saved under:
+
+- `experiments/configs/<preset>/baselines/nearest_centroid/`
+- `experiments/results/<preset>/baselines/nearest_centroid/`
+
 ## Outputs
 
 - `experiments/configs/<preset>/run_config.json`: saved run settings
@@ -118,6 +130,8 @@ This keeps the main preset result untouched in:
 - `experiments/results/<preset>/macro_f1_bar_chart.png`: presentation-ready validation vs test Macro-F1 graph
 - `experiments/results/<preset>/sample_log_mel.png`: example log-Mel spectrogram grid from the run
 - `experiments/results/<preset>/baseline_cnn.pt`: trained model weights
+- `experiments/results/<preset>/baselines/nearest_centroid/summary.json`: simple non-DL baseline metrics
+- `experiments/results/<preset>/baselines/nearest_centroid/confusion_matrix.png`: simple non-DL baseline confusion matrix
 
 ## Repository Layout
 

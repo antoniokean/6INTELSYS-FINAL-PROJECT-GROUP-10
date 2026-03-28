@@ -61,6 +61,7 @@ class ResidualBlock(nn.Module):
 
 
 class SimpleCNN(nn.Module):
+    # Deep-learning baseline used for the main project experiments.
     def __init__(self, num_classes, in_channels=3):
         super().__init__()
         self.stem = nn.Sequential(

@@ -27,7 +27,43 @@ from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
-MANIFEST_FILE = DATA_DIR / "dataset_manifest.csv"
+
+
+def resolve_audio_data_dir():
+    candidate_dirs = [
+        PROJECT_ROOT / "data",
+        PROJECT_ROOT.parent / "data",
+    ]
+    for candidate in candidate_dirs:
+        if not candidate.exists():
+            continue
+        if any(path.is_dir() and path.name != "_background_noise_" for path in candidate.iterdir()):
+            return candidate
+    return DATA_DIR
+
+
+AUDIO_DATA_DIR = resolve_audio_data_dir()
+
+
+def resolve_manifest_file():
+    candidate_files = [
+        DATA_DIR / "dataset_manifest.csv",
+        PROJECT_ROOT.parent / "data" / "dataset_manifest.csv",
+    ]
+    for candidate in candidate_files:
+        if not candidate.exists():
+            continue
+        try:
+            with candidate.open("r", encoding="utf-8") as file:
+                next(file, None)
+                if next(file, None):
+                    return candidate
+        except OSError:
+            continue
+    return DATA_DIR / "dataset_manifest.csv"
+
+
+MANIFEST_FILE = resolve_manifest_file()
 OUTPUT_DIR = PROJECT_ROOT / "experiments"
 DEFAULT_CONFIG_DIR = OUTPUT_DIR / "configs"
 DEFAULT_LOG_DIR = OUTPUT_DIR / "logs"
@@ -42,7 +78,7 @@ N_MELS = 64
 N_FFT = 1024
 HOP_LENGTH = 256
 FEATURE_CACHE_VERSION = "multi_logmel_v2"
-BACKGROUND_NOISE_DIR = DATA_DIR / "_background_noise_"
+BACKGROUND_NOISE_DIR = AUDIO_DATA_DIR / "_background_noise_"
 DEFAULT_BACKGROUND_NOISE_PROB = 0.45
 DEFAULT_GAIN_DB = 6.0
 DEFAULT_SPEC_TIME_MASKS = 2
@@ -240,6 +276,7 @@ def apply_preset(args):
 
 
 def apply_ablation(args):
+    # Ablations turn off one major training component at a time for comparison.
     if args.ablation == "no_augment":
         args.no_augment = True
     elif args.ablation == "no_balance":
@@ -274,6 +311,7 @@ def resolve_cache_dir(args, output_dirs):
 
 
 def set_seed(seed):
+    # Fixed seeds keep the reported runs and ablations reproducible.
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -494,11 +532,14 @@ def compute_macro_f1(labels, predictions, num_classes):
 
 def load_audio(audio_path, target_num_samples=TARGET_NUM_SAMPLES):
     if sf is not None:
-        audio, sample_rate = sf.read(str(audio_path), dtype="float32", always_2d=False)
-        if audio.ndim > 1:
-            audio = audio.mean(axis=1)
-        if sample_rate != SAMPLE_RATE:
-            audio = librosa.resample(audio, orig_sr=sample_rate, target_sr=SAMPLE_RATE)
+        try:
+            audio, sample_rate = sf.read(str(audio_path), dtype="float32", always_2d=False)
+            if audio.ndim > 1:
+                audio = audio.mean(axis=1)
+            if sample_rate != SAMPLE_RATE:
+                audio = librosa.resample(audio, orig_sr=sample_rate, target_sr=SAMPLE_RATE)
+        except Exception:
+            audio, _ = librosa.load(audio_path, sr=SAMPLE_RATE)
     else:
         audio, _ = librosa.load(audio_path, sr=SAMPLE_RATE)
 
@@ -691,6 +732,7 @@ def maybe_augment_audio(audio, max_shift_samples, noise_scale, background_noises
 
 
 def audio_to_log_mel(audio):
+    # All baselines use the same 3-channel log-Mel representation for fairness.
     mel = librosa.feature.melspectrogram(
         y=audio,
         sr=SAMPLE_RATE,
@@ -912,6 +954,10 @@ def build_cache_path(cache_dir, relative_audio_path):
     return cache_dir / FEATURE_CACHE_VERSION / Path(relative_audio_path).with_suffix(".npy")
 
 
+def build_legacy_cache_path(cache_dir, relative_audio_path):
+    return cache_dir / Path(relative_audio_path).with_suffix(".npy")
+
+
 def save_cached_feature(cache_path, features):
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     temp_path = cache_path.with_name(f"{cache_path.stem}.{os.getpid()}.tmp.npy")
@@ -960,15 +1006,17 @@ class SpeechCommandsDataset(Dataset):
 
     def __getitem__(self, index):
         row = self.rows[index]
-        audio_path = DATA_DIR / row["path"]
+        audio_path = AUDIO_DATA_DIR / row["path"]
         cache_path = None
 
         if self.cache_dir is not None and not self.augment:
             cache_path = build_cache_path(self.cache_dir, row["path"])
-            if cache_path.exists():
-                features = np.load(cache_path).astype(np.float32)
+            legacy_cache_path = build_legacy_cache_path(self.cache_dir, row["path"])
+            existing_cache_path = cache_path if cache_path.exists() else legacy_cache_path
+            if existing_cache_path.exists():
+                features = np.load(existing_cache_path).astype(np.float32)
                 if not is_valid_cached_feature(features):
-                    print(f"Rebuilding invalid feature cache entry: {cache_path}")
+                    print(f"Rebuilding invalid feature cache entry: {existing_cache_path}")
                     audio = load_audio(audio_path)
                     if self.validate_samples:
                         validate_numpy_array("audio", audio, row["path"])
@@ -1524,12 +1572,14 @@ def save_outputs(output_dirs, model, label_map, history, summary, threshold_tuni
     with (log_dir / "history.json").open("w", encoding="utf-8") as file:
         json.dump(history, file, indent=2)
 
+    # Persist final metrics and hyperparameters so the training setup is auditable.
     with (results_dir / "summary.json").open("w", encoding="utf-8") as file:
         json.dump(summary, file, indent=2)
 
     confusion_matrix_path = results_dir / "confusion_matrix.png"
     confusion_matrix_normalized_path = results_dir / "confusion_matrix_normalized.png"
     confusion_matrix_json_path = results_dir / "confusion_matrix.json"
+    # Export held-out confusion matrices for class-level error and slice analysis.
     confusion_source = test_eval if len(test_eval.get("labels", [])) > 0 else val_eval
     confusion_metadata = save_confusion_matrix(
         confusion_source.get("labels"),
@@ -1603,6 +1653,7 @@ def main():
 
     rows = load_manifest(args.manifest)
     label_map = build_label_map(rows)
+    # The training loop consumes the fixed manifest split instead of resplitting data.
     split_to_rows = split_rows(rows)
 
     split_to_rows["training"] = limit_rows(split_to_rows["training"], args.max_train_samples, args.seed, "training")
@@ -1742,6 +1793,7 @@ def main():
         lr=args.learning_rate,
         weight_decay=args.weight_decay,
     )
+    # Reduce the learning rate when validation accuracy stalls.
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer,
         mode="max",
@@ -1834,6 +1886,7 @@ def main():
         else:
             epochs_without_improvement += 1
 
+        # Stop early once validation accuracy has plateaued for several epochs.
         if epochs_without_improvement >= args.early_stop_patience:
             print("Early stopping triggered.")
             break

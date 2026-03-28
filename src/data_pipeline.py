@@ -4,12 +4,28 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = PROJECT_ROOT / "data"
-VALIDATION_FILE = DATA_DIR / "validation_list.txt"
-TESTING_FILE = DATA_DIR / "testing_list.txt"
-REMOVED_FILE = DATA_DIR / "removed_clips.txt"
-MANIFEST_FILE = DATA_DIR / "dataset_manifest.csv"
+METADATA_DIR = PROJECT_ROOT / "data"
 SKIP_DIRS = {"_background_noise_"}
+
+
+def resolve_audio_data_dir():
+    candidate_dirs = [
+        PROJECT_ROOT / "data",
+        PROJECT_ROOT.parent / "data",
+    ]
+    for candidate in candidate_dirs:
+        if not candidate.exists():
+            continue
+        if any(path.is_dir() and path.name not in SKIP_DIRS for path in candidate.iterdir()):
+            return candidate
+    return METADATA_DIR
+
+
+AUDIO_DATA_DIR = resolve_audio_data_dir()
+VALIDATION_FILE = METADATA_DIR / "validation_list.txt"
+TESTING_FILE = METADATA_DIR / "testing_list.txt"
+REMOVED_FILE = METADATA_DIR / "removed_clips.txt"
+MANIFEST_FILE = METADATA_DIR / "dataset_manifest.csv"
 
 
 def normalize_path(path_str):
@@ -42,6 +58,8 @@ def ensure_required_files_exist():
 
 
 def get_split(rel_path, validation_paths, testing_paths):
+    # Reuse the dataset's official split lists so repeated speaker utterances do
+    # not leak across train, validation, and test partitions.
     in_validation = rel_path in validation_paths
     in_testing = rel_path in testing_paths
 
@@ -118,7 +136,7 @@ def main():
     removed_paths = load_path_set(REMOVED_FILE)
 
     rows, observed_paths = build_manifest(
-        DATA_DIR,
+        AUDIO_DATA_DIR,
         validation_paths,
         testing_paths,
         removed_paths,
