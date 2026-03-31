@@ -1,11 +1,11 @@
 {
-  "path": "follow/0ea9c8ce_nohash_2.wav",
-  "label": "follow",
+  "path": "learn/ce0cb033_nohash_1.wav",
+  "label": "learn",
   "split": "validation",
   "seed": 2518392709,
-  "confidence": 0.99072265625,
-  "predicted_label": "follow",
+  "confidence": 0.99853515625,
+  "predicted_label": "learn",
   "correct": true,
-  "pattern_similarity": 0.9999996423721313,
-  "representative_path": "follow/0ea9c8ce_nohash_2.wav"
+  "pattern_similarity": 0.9999998807907104,
+  "representative_path": "learn/ce0cb033_nohash_1.wav"
 }

@@ -1,167 +1,167 @@
 [
   {
-    "path": "seven/837a0f64_nohash_1.wav",
-    "label": "seven",
-    "split": "testing",
-    "seed": 2518392709,
-    "confidence": 0.99853515625,
-    "predicted_label": "seven",
-    "correct": true,
-    "pattern_similarity": 1.0000001192092896,
-    "representative_path": "seven/837a0f64_nohash_1.wav"
-  },
-  {
-    "path": "seven/45692b02_nohash_3.wav",
-    "label": "seven",
+    "path": "cat/7117fb6d_nohash_0.wav",
+    "label": "cat",
     "split": "validation",
     "seed": 2518392709,
     "confidence": 0.998046875,
-    "predicted_label": "seven",
+    "predicted_label": "cat",
     "correct": true,
-    "pattern_similarity": 0.854582667350769,
-    "representative_path": "seven/837a0f64_nohash_1.wav"
+    "pattern_similarity": 1.0,
+    "representative_path": "cat/7117fb6d_nohash_0.wav"
   },
   {
-    "path": "seven/0cb74144_nohash_3.wav",
-    "label": "seven",
+    "path": "cat/16db1582_nohash_1.wav",
+    "label": "cat",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99169921875,
+    "predicted_label": "cat",
+    "correct": true,
+    "pattern_similarity": 0.7697527408599854,
+    "representative_path": "cat/7117fb6d_nohash_0.wav"
+  },
+  {
+    "path": "cat/1e02ffc5_nohash_0.wav",
+    "label": "cat",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.9921875,
+    "predicted_label": "cat",
+    "correct": true,
+    "pattern_similarity": 0.6976409554481506,
+    "representative_path": "cat/7117fb6d_nohash_0.wav"
+  },
+  {
+    "path": "cat/91b03183_nohash_0.wav",
+    "label": "cat",
     "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.97314453125,
+    "predicted_label": "cat",
+    "correct": true,
+    "pattern_similarity": 0.6748559474945068,
+    "representative_path": "cat/7117fb6d_nohash_0.wav"
+  },
+  {
+    "path": "cat/81dc4a94_nohash_1.wav",
+    "label": "cat",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99853515625,
+    "predicted_label": "cat",
+    "correct": true,
+    "pattern_similarity": 0.48463281989097595,
+    "representative_path": "cat/7117fb6d_nohash_0.wav"
+  },
+  {
+    "path": "one/837a0f64_nohash_0.wav",
+    "label": "one",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.99267578125,
+    "predicted_label": "one",
+    "correct": true,
+    "pattern_similarity": 0.9999997615814209,
+    "representative_path": "one/837a0f64_nohash_0.wav"
+  },
+  {
+    "path": "one/ad63d93c_nohash_1.wav",
+    "label": "one",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99755859375,
+    "predicted_label": "one",
+    "correct": true,
+    "pattern_similarity": 0.8224000334739685,
+    "representative_path": "one/837a0f64_nohash_0.wav"
+  },
+  {
+    "path": "one/bfd26d6b_nohash_2.wav",
+    "label": "one",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.98828125,
+    "predicted_label": "one",
+    "correct": true,
+    "pattern_similarity": 0.7647303938865662,
+    "representative_path": "one/837a0f64_nohash_0.wav"
+  },
+  {
+    "path": "one/1e02ffc5_nohash_1.wav",
+    "label": "one",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99853515625,
+    "predicted_label": "one",
+    "correct": true,
+    "pattern_similarity": 0.620511531829834,
+    "representative_path": "one/837a0f64_nohash_0.wav"
+  },
+  {
+    "path": "one/29b81b73_nohash_0.wav",
+    "label": "one",
+    "split": "validation",
+    "seed": 2518392709,
+    "confidence": 0.99755859375,
+    "predicted_label": "one",
+    "correct": true,
+    "pattern_similarity": 0.5267073512077332,
+    "representative_path": "one/837a0f64_nohash_0.wav"
+  },
+  {
+    "path": "seven/1942abd7_nohash_0.wav",
+    "label": "seven",
+    "split": "validation",
     "seed": 2518392709,
     "confidence": 0.9970703125,
     "predicted_label": "seven",
     "correct": true,
-    "pattern_similarity": 0.7595394253730774,
-    "representative_path": "seven/837a0f64_nohash_1.wav"
+    "pattern_similarity": 0.9999998211860657,
+    "representative_path": "seven/1942abd7_nohash_0.wav"
   },
   {
-    "path": "seven/4fd1443e_nohash_1.wav",
+    "path": "seven/94de6a6a_nohash_0.wav",
+    "label": "seven",
+    "split": "testing",
+    "seed": 2518392709,
+    "confidence": 0.98046875,
+    "predicted_label": "seven",
+    "correct": true,
+    "pattern_similarity": 0.7419112324714661,
+    "representative_path": "seven/1942abd7_nohash_0.wav"
+  },
+  {
+    "path": "seven/d0faf7e4_nohash_4.wav",
     "label": "seven",
     "split": "testing",
     "seed": 2518392709,
     "confidence": 0.9736328125,
     "predicted_label": "seven",
     "correct": true,
-    "pattern_similarity": 0.7418861389160156,
-    "representative_path": "seven/837a0f64_nohash_1.wav"
+    "pattern_similarity": 0.6978996396064758,
+    "representative_path": "seven/1942abd7_nohash_0.wav"
   },
   {
-    "path": "seven/e41a903b_nohash_1.wav",
+    "path": "seven/ca48dc76_nohash_1.wav",
     "label": "seven",
     "split": "testing",
     "seed": 2518392709,
-    "confidence": 0.9990234375,
+    "confidence": 0.9951171875,
     "predicted_label": "seven",
     "correct": true,
-    "pattern_similarity": 0.5581802129745483,
-    "representative_path": "seven/837a0f64_nohash_1.wav"
+    "pattern_similarity": 0.691868782043457,
+    "representative_path": "seven/1942abd7_nohash_0.wav"
   },
   {
-    "path": "dog/0f250098_nohash_0.wav",
-    "label": "dog",
+    "path": "seven/adebe223_nohash_1.wav",
+    "label": "seven",
     "split": "testing",
-    "seed": 2518392709,
-    "confidence": 0.998046875,
-    "predicted_label": "dog",
-    "correct": true,
-    "pattern_similarity": 0.9999999403953552,
-    "representative_path": "dog/0f250098_nohash_0.wav"
-  },
-  {
-    "path": "dog/370844f7_nohash_1.wav",
-    "label": "dog",
-    "split": "testing",
-    "seed": 2518392709,
-    "confidence": 0.99853515625,
-    "predicted_label": "dog",
-    "correct": true,
-    "pattern_similarity": 0.7977336645126343,
-    "representative_path": "dog/0f250098_nohash_0.wav"
-  },
-  {
-    "path": "dog/c256377f_nohash_0.wav",
-    "label": "dog",
-    "split": "validation",
-    "seed": 2518392709,
-    "confidence": 0.99755859375,
-    "predicted_label": "dog",
-    "correct": true,
-    "pattern_similarity": 0.7878181338310242,
-    "representative_path": "dog/0f250098_nohash_0.wav"
-  },
-  {
-    "path": "dog/026290a7_nohash_0.wav",
-    "label": "dog",
-    "split": "validation",
-    "seed": 2518392709,
-    "confidence": 0.99560546875,
-    "predicted_label": "dog",
-    "correct": true,
-    "pattern_similarity": 0.6596947908401489,
-    "representative_path": "dog/0f250098_nohash_0.wav"
-  },
-  {
-    "path": "dog/29b81b73_nohash_1.wav",
-    "label": "dog",
-    "split": "validation",
-    "seed": 2518392709,
-    "confidence": 0.9970703125,
-    "predicted_label": "dog",
-    "correct": true,
-    "pattern_similarity": 0.6527409553527832,
-    "representative_path": "dog/0f250098_nohash_0.wav"
-  },
-  {
-    "path": "zero/5c8af87a_nohash_0.wav",
-    "label": "zero",
-    "split": "testing",
-    "seed": 2518392709,
-    "confidence": 0.99365234375,
-    "predicted_label": "zero",
-    "correct": true,
-    "pattern_similarity": 0.9999998807907104,
-    "representative_path": "zero/5c8af87a_nohash_0.wav"
-  },
-  {
-    "path": "zero/0ea9c8ce_nohash_1.wav",
-    "label": "zero",
-    "split": "validation",
-    "seed": 2518392709,
-    "confidence": 0.99609375,
-    "predicted_label": "zero",
-    "correct": true,
-    "pattern_similarity": 0.737358808517456,
-    "representative_path": "zero/5c8af87a_nohash_0.wav"
-  },
-  {
-    "path": "zero/87070229_nohash_2.wav",
-    "label": "zero",
-    "split": "testing",
-    "seed": 2518392709,
-    "confidence": 0.994140625,
-    "predicted_label": "zero",
-    "correct": true,
-    "pattern_similarity": 0.6731639504432678,
-    "representative_path": "zero/5c8af87a_nohash_0.wav"
-  },
-  {
-    "path": "zero/67c7fecb_nohash_0.wav",
-    "label": "zero",
-    "split": "validation",
     "seed": 2518392709,
     "confidence": 0.99658203125,
-    "predicted_label": "zero",
+    "predicted_label": "seven",
     "correct": true,
-    "pattern_similarity": 0.6181431412696838,
-    "representative_path": "zero/5c8af87a_nohash_0.wav"
-  },
-  {
-    "path": "zero/f822b9bf_nohash_1.wav",
-    "label": "zero",
-    "split": "validation",
-    "seed": 2518392709,
-    "confidence": 0.99755859375,
-    "predicted_label": "zero",
-    "correct": true,
-    "pattern_similarity": 0.5239003300666809,
-    "representative_path": "zero/5c8af87a_nohash_0.wav"
+    "pattern_similarity": 0.669181227684021,
+    "representative_path": "seven/1942abd7_nohash_0.wav"
   }
 ]

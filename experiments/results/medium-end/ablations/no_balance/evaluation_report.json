@@ -1,22 +1,22 @@
 {
   "preset": "medium_end",
   "epochs_completed": 15,
-  "best_epoch": 15,
-  "best_validation_accuracy": 0.921,
-  "final_validation_accuracy": 0.921,
-  "final_validation_macro_f1": 0.9210577758733693,
-  "final_test_accuracy": 0.909,
-  "final_test_macro_f1": 0.908205870343264,
-  "generalization_gap": -0.044600000000000084,
+  "best_epoch": 13,
+  "best_validation_accuracy": 0.965,
+  "final_validation_accuracy": 0.965,
+  "final_validation_macro_f1": 0.9648760919135279,
+  "final_test_accuracy": 0.942,
+  "final_test_macro_f1": 0.9419550329947074,
+  "generalization_gap": -0.0343,
   "batch_size": 16,
   "epochs_target": 15,
   "rl_threshold_tuning": {
-    "best_threshold": 0.65,
-    "validation_expected_cost_baseline": 0.395,
-    "validation_expected_cost_tuned": 0.221,
-    "validation_relative_reduction": 0.44050632911392407,
-    "test_expected_cost_baseline": 0.455,
-    "test_expected_cost_tuned": 0.234,
-    "test_relative_reduction": 0.4857142857142857
+    "best_threshold": 0.5,
+    "validation_expected_cost_baseline": 0.175,
+    "validation_expected_cost_tuned": 0.122,
+    "validation_relative_reduction": 0.3028571428571428,
+    "test_expected_cost_baseline": 0.29,
+    "test_expected_cost_tuned": 0.235,
+    "test_relative_reduction": 0.1896551724137931
   }
 }

@@ -25,16 +25,18 @@ To restore the dataset into the project, run `python .\get_data.py` from inside 
 
 ## Quick Start
 
-1. Check or restore the dataset:
+For this project submission, `medium_end` is the official final preset.
+
+1. Restore the dataset if needed:
    `cd .\data` then `python .\get_data.py`
-2. Build the dataset manifest:
-   `python .\src\data_pipeline.py`
-3. Run the full pipeline with one command:
+2. Return to the project root:
+   `cd ..`
+3. Run the official full pipeline:
    `python .\run.py --preset medium_end --no-open-files`
-4. Read saved results separately when needed:
+4. Re-open the saved evaluation summary later if needed:
    `python .\src\eval.py --preset medium_end`
 
-For this project submission, `medium_end` is the official final preset.
+The `run.py` command already handles dataset manifest generation, training, and evaluation for the selected preset.
 
 ## Training Presets
 
@@ -64,20 +66,19 @@ Running the same preset again overwrites that preset's files, while other preset
 
 ## Final Medium-End Result
 
-The current official final preset is `medium_end`:
+The current official final preset is `medium_end`, using `train=10000`, `val=1000`, and `test=1000`.
 
-The saved `medium_end` results below correspond to the current official preset using `train=10000`, `val=1000`, and `test=1000`.
+This run reached strong classification performance while also improving decision reliability through RL-based threshold tuning.
 
 | Preset | Val Acc | Val Macro-F1 | Test Acc | Test Macro-F1 | Val Expected Cost | Test Expected Cost | Tuned Threshold |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `medium_end` | 0.92700 | 0.92698 | 0.91600 | 0.91593 | 0.36500 -> 0.20900 | 0.42000 -> 0.25700 | 0.80 |
+| `medium_end` | 0.96300 | 0.96309 | 0.93000 | 0.92908 | 0.18500 -> 0.14100 | 0.35000 -> 0.22000 | 0.60 |
 
-The `high_end` preset is still available for full-dataset reference runs, but the final report and reproduction path should use `medium_end`.
+In plain terms, the official final run achieved **96.30% validation accuracy**, **96.31% validation Macro-F1**, **93.00% test accuracy**, and **92.91% test Macro-F1**. Threshold tuning then reduced the expected test cost from **0.350** to **0.220**.
 
-Use this table for the final report or defense slides. The training-curve image is a supporting visualization of learning behavior, not the main final-results presentation.
+The `high_end` preset is still available for full-dataset reference runs, but the final report, slides, and reproduction path should use `medium_end`.
 
-The presentation-ready Macro-F1 graph is saved at `experiments/results/medium-end/macro_f1_bar_chart.png`.
-The confusion-matrix visual should be saved at `experiments/results/medium-end/confusion_matrix.png` after rerunning the updated training pipeline.
+For presentation, the final metrics table and confusion matrix are the most useful outputs. Training curves are still helpful, but they should be treated as supporting evidence rather than the main final result.
 
 ## Safe Ablation Runs
 

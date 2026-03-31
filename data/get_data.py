@@ -18,7 +18,10 @@ REQUIRED_FILES = [
 REQUIRED_DIRS = [
     DATA_DIR / "_background_noise_",
 ]
-MIN_LABEL_DIRS = 20
+REQUIRED_LABELS = [
+    "wow",
+]
+MIN_LABEL_DIRS = 35
 
 
 def parse_args():
@@ -43,10 +46,17 @@ def get_label_dirs():
 
 
 def get_missing_items():
-    missing_items = []
-    for path in REQUIRED_FILES + REQUIRED_DIRS:
-        if not path.exists():
-            missing_items.append(path.name)
+    missing_items = [
+        path.name
+        for path in REQUIRED_FILES + REQUIRED_DIRS
+        if not path.exists()
+    ]
+
+    label_dirs = set(get_label_dirs())
+    for label in REQUIRED_LABELS:
+        if label not in label_dirs:
+            missing_items.append(label)
+
     return missing_items
 
 
@@ -87,8 +97,10 @@ def download_dataset_with_kagglehub(dataset_handle):
             "kagglehub is not installed. Install it with 'python -m pip install kagglehub'."
         )
 
-    print(f"Downloading dataset from KaggleHub: {dataset_handle}")
-    return Path(kagglehub.dataset_download(dataset_handle))
+    # Download latest version from KaggleHub.
+    path = kagglehub.dataset_download(dataset_handle)
+    print("Path to dataset files:", path)
+    return Path(path)
 
 
 def copy_downloaded_dataset(source_dir, target_dir):
@@ -124,14 +136,13 @@ def main():
     try:
         downloaded_path = download_dataset_with_kagglehub(args.dataset)
         copy_downloaded_dataset(downloaded_path, DATA_DIR)
+        print("Download and extraction complete.")
+        print_status()
     except Exception as error:
-        print(f"Dataset download failed: {error}")
-        print("Tip: authenticate KaggleHub first if your environment is not logged in to Kaggle.")
+        print(f"Download failed: {error}")
+        print("Tip: authenticate KaggleHub first or verify internet access.")
         print("Open data/README.md for the dataset source and setup details.")
         raise
-
-    print("Download and extraction complete.")
-    print_status()
 
 
 if __name__ == "__main__":

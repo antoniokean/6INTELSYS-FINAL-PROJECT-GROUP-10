@@ -34,11 +34,11 @@ The project includes several design choices to reduce these risks:
 
 ## Privacy
 
-This project uses the Google Speech Commands Dataset v0.02, a public dataset licensed under CC BY 4.0. The dataset notes indicate that participant age, gender, and location were not retained, and speakers are represented by anonymized identifiers. The project does not collect any new personal audio and does not add new participant recordings to the repository.
+This project uses the Google Speech Commands Dataset v0.02, a public dataset licensed under CC BY 4.0. The dataset notes indicate that participant age, gender, and location were not retained, and speakers are represented by anonymized identifiers. The project does not collect any new personal audio and does not add new participant recordings to the repository. Even so, voice data is still a sensitive data type in general, so the system should be treated as an academic prototype rather than a production-ready deployment.
 
 ## Fairness and Slice Analysis
 
-The project includes class-level error analysis through the final test-set confusion matrix. However, it does not include a separate demographic, speaker-based, accent-based, or noise-specific slice analysis. A formal fairness audit was not possible because the available dataset metadata does not provide those subgroup labels.
+The project includes class-level error analysis through the final test-set confusion matrix. However, it does not include a separate demographic, speaker-based, accent-based, or noise-specific slice analysis. A formal fairness audit was not possible because the available dataset metadata does not provide those subgroup labels, so fairness evaluation is limited to class-level metrics and confusion-matrix-based analysis.
 
 ## Intended Use
 

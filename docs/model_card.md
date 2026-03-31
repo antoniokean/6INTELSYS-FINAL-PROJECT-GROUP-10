@@ -1,121 +1,75 @@
-# Model Card
-
-## Model Summary
-
-This project implements a speech command recognition system for short spoken command words. The system uses a residual squeeze-excitation CNN to classify spectrogram-based audio features, followed by a Q-learning RL threshold-tuning step to improve cost-sensitive decision-making.
-
-The official final reporting preset for this repository is `medium_end`.
+# Model Card: Speech Command Recognition with CNN + RL Threshold Tuning
 
 ## Model Details
 
-- **Model type:** CNN classifier with residual and squeeze-excitation components, plus an RL threshold agent
-- **Input:** 1-second, 16 kHz audio clips
-- **Features:** normalized log-Mel, delta, and delta-delta spectrogram channels with 64 Mel bins
-- **Output:** one of 34 speech command classes
-- **Optimizer:** AdamW
-- **Scheduler:** ReduceLROnPlateau
-- **Official preset:** `medium_end`
-
-## Dataset
-
-- **Dataset:** Google Speech Commands Dataset v0.02
-- **License:** CC BY 4.0
-- **Size:** 105,829 audio clips, 34 classes, approximately 2,600 speakers
-- **Official run subset:** 10,000 training samples, 1,000 validation samples, and 1,000 testing samples
-- **Cleaning:** 252 invalid clips were excluded through the dataset manifest
-- **Splits:** dataset-provided validation and testing lists, with remaining usable clips assigned to training
+- Residual squeeze-excitation CNN classifier with RL-based threshold tuning
+- Uses 1-second, 16 kHz audio clips
+- Input features are normalized log-Mel, delta, and delta-delta spectrograms
+- Trained using AdamW with a ReduceLROnPlateau scheduler
+- Official final preset: `medium_end`
 
 ## Intended Use
 
-This model is intended for limited-vocabulary speech command recognition in low-risk Voice User Interface tasks, academic research, and controlled demonstrations. Example use cases include simple command recognition such as device navigation or lightweight command triggering in offline prototypes.
+- Academic research and low-risk Voice User Interface tasks
+- Not intended for surveillance, speaker identification, or high-stakes deployment
 
-## Out-of-Scope Use
+## Dataset
 
-This model should not be used for:
+- Google Speech Commands Dataset v0.02 (Warden, 2018)
+- Contains 105,829 total clips, 35 classes, and about 2,600 speakers
 
-- speaker identification
-- surveillance
-- medical, legal, or other high-stakes decision-making
-- open-ended speech understanding
-- safety-critical deployment without additional validation
+## Evaluation Data
 
-## Training Setup
+- Evaluated on Google Speech Commands Dataset v0.02
+- Uses the dataset's provided validation and testing lists
+- Current manifest contains 105,829 clips across 35 classes
+- 89,080 clips were kept and 16,749 were removed during filtering
 
-The official `medium_end` run used the following setup:
+## Training Data
 
-- 15 epochs
-- batch size of 16
-- learning rate of 0.001
-- weight decay of 0.0001
-- label smoothing of 0.05
-- fixed seed `2518392709`
-- feature caching enabled
-- AMP disabled
-- automatic device selection
+- Uses the same cleaned Speech Commands dataset as the evaluation data
+- Official `medium_end` run uses 10,000 training, 1,000 validation, and 1,000 testing samples
+- Audio is converted into spectrogram-based features before training
+- Main setup also uses augmentation, balanced sampling, and class-weighted loss
 
-The pipeline also supports time shifting, background-noise mixing, Gaussian noise, SpecAugment masking, balanced sampling, and class-weighted loss.
+## License
+
+- Creative Commons BY 4.0
+
+## Input
+
+- 1-second, 16 kHz audio converted into normalized log-Mel, delta, and delta-delta features
+
+## Metrics
+
+- Evaluation metrics include accuracy >= 90%, Macro-F1 >= 0.88, and RL cost reduction >= 20%
 
 ## Performance
 
-The current official `medium_end` run achieved:
+- The model achieved 93.00% test accuracy and 92.91% test Macro-F1
+- RL threshold tuning reduced expected test cost from 0.350 to 0.220
 
-- **Validation Accuracy:** 92.70%
-- **Validation Macro-F1:** 92.70%
-- **Test Accuracy:** 91.60%
-- **Test Macro-F1:** 91.59%
-- **Best Threshold:** 0.80
-- **Validation Expected Cost:** 0.365 -> 0.209
-- **Test Expected Cost:** 0.420 -> 0.257
-- **Test Cost Reduction:** 0.163
+## Factors
 
-These values are based on:
+- Performance can be affected by background noise
+- Accent variation and speaking style can change results
+- Microphone quality and recording conditions also matter
 
-- `experiments/results/medium-end/final_metrics.json`
-- `experiments/results/medium-end/evaluation_report.json`
+## Limitation
 
-## Error Analysis
-
-The main class-level error analysis in this project is the final test-set confusion matrix. One of the more visible confusion patterns is between similar-sounding commands such as `forward` and `four`. The project does not include a separate demographic, speaker-based, or accent-based slice analysis.
+- Performance may drop under noise, accent variation, non-English speech, and more diverse real-world speaking conditions
 
 ## Ethical Considerations
 
-Important ethical considerations for this model include:
+- Accent and dialect bias may be present, reducing the accuracy for non-native speakers
+- Voice data may be personal and sensitive by nature
+- Formal demographic fairness auditing was not possible
+- Fairness evaluation is limited to class-level metrics and confusion-matrix analysis
 
-- reduced performance under accent and dialect variation
-- weaker performance in noisy environments
-- fairness limitations due to the lack of demographic metadata in the dataset
-- privacy concerns that naturally come with voice data, even though this project uses a public dataset and does not collect new personal audio
+## Caveats and Recommendations
 
-The dataset notes indicate that participant age, gender, and location were not retained, and speakers are represented by anonymized identifiers.
-
-## Limitations
-
-This model has several practical limitations:
-
-- it was trained only on short English command clips
-- performance may decrease under heavy noise, accent variation, and different speaking styles
-- it does not perform general speech recognition or language understanding
-- it is best suited for controlled or low-risk settings
-- hardware limits may affect training speed and reproducibility across devices
-
-## Deployment Guidance
-
-If this model is deployed in a prototype or low-risk application, it should:
-
-- validate performance in the target acoustic environment
-- use a fallback or abstain mechanism for low-confidence predictions
-- avoid high-stakes use
-- be retested if the input device, microphone quality, or environment changes
-
-## Reproduction
-
-Recommended quick-start commands:
-
-```powershell
-cd .\data
-python .\get_data.py
-cd ..
-python .\src\data_pipeline.py
-python .\run.py --preset medium_end --no-open-files
-python .\src\eval.py --preset medium_end
-```
+- Performance may drop in noisy or more varied real-world settings
+- The model was trained only on short English command clips
+- It should not be used for high-stakes deployment
+- Low-confidence prediction handling should be kept in any prototype use
+- Future work can focus on stronger robustness and better handling of similar-sounding commands

@@ -6,6 +6,21 @@ variety of different speakers. The audio files are organized into folders based
 on the word they contain, and this data set is designed to help train simple
 machine learning models. This dataset is covered in more detail at [https://arxiv.org/abs/1804.03209](https://arxiv.org/abs/1804.03209).
 
+## Project Note
+
+This repository uses the Google Speech Commands Dataset v0.02 as its original
+source, but the project now restores the working dataset through
+`data/get_data.py` using a KaggleHub mirror of the cleaned dataset. In other
+words, the official source remains Speech Commands v0.02, while the practical
+restore path for this repository is the KaggleHub download used by
+`get_data.py`.
+
+For the current project version, the dataset manifest contains 105,829 total
+audio clips across 35 classes. Of these, 89,080 clips are kept as usable
+samples and 16,749 clips are removed during filtering. The provided
+`validation_list.txt` and `testing_list.txt` files are still used to preserve
+the dataset split convention in the project pipeline.
+
 It's licensed under the [Creative Commons BY 4.0
 license](https://creativecommons.org/licenses/by/4.0/). See the LICENSE
 file in this folder for full details. Its original location was at

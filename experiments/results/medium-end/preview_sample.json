@@ -1,11 +1,11 @@
 {
-  "path": "seven/837a0f64_nohash_1.wav",
-  "label": "seven",
-  "split": "testing",
+  "path": "cat/7117fb6d_nohash_0.wav",
+  "label": "cat",
+  "split": "validation",
   "seed": 2518392709,
-  "confidence": 0.99853515625,
-  "predicted_label": "seven",
+  "confidence": 0.998046875,
+  "predicted_label": "cat",
   "correct": true,
-  "pattern_similarity": 1.0000001192092896,
-  "representative_path": "seven/837a0f64_nohash_1.wav"
+  "pattern_similarity": 1.0,
+  "representative_path": "cat/7117fb6d_nohash_0.wav"
 }

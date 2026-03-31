@@ -2,7 +2,7 @@
   "preset": "medium_end",
   "manifest": "C:\\-Programming\\Project-root\\6INTELSYS-FINAL-PROJECT-GROUP-10\\data\\dataset_manifest.csv",
   "output_dir": "C:\\-Programming\\Project-root\\6INTELSYS-FINAL-PROJECT-GROUP-10\\experiments",
-  "cache_dir": "C:\\-Programming\\Project-root\\6INTELSYS-FINAL-PROJECT-GROUP-10\\experiments\\logs\\medium-end\\ablations\\no_augment\\feature_cache",
+  "cache_dir": "C:\\-Programming\\Project-root\\6INTELSYS-FINAL-PROJECT-GROUP-10\\experiments\\logs\\medium-end\\feature_cache",
   "seed": 2518392709,
   "max_train_samples": 10000,
   "max_val_samples": 1000,
